@@ -10,6 +10,8 @@ else
   echo export PATH="$HOME/.linuxbrew/bin:$PATH" > $HOME/.profile
 fi
 
+export PATH="$HOME/.linuxbrew/bin:$PATH"
+
 brew install gcc
 brew install sudo
 brew install curl
