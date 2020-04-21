@@ -19,7 +19,7 @@ if type "yum" > /dev/null 2>&1; then
     yum install sudo -y
   fi
   sudo yum groupinstall 'Development Tools' -y
-  sudo yum install curl file git -y
+  sudo yum install curl file git install which ruby -y
   sudo yum install libxcrypt-compat -y
 fi
 
