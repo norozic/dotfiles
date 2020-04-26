@@ -1,3 +1,5 @@
+cd
+
 ## Environment variable
 set -x GPG_TTY (tty)
 set -x PATH $HOME/.linuxbrew/bin $PATH
