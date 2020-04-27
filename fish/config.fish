@@ -1,8 +1,12 @@
-cd
+switch (pwd)
+case '/mnt/c/Users/*'
+  cd
+end
 
 ## Environment variable
 set -x GPG_TTY (tty)
 set -x PATH $HOME/.linuxbrew/bin $PATH
+set -x PATH /usr/local/opt/ruby/bin $PATH
 
 ## Prompt color
 set pure_color_primary 60c79f
