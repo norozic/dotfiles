@@ -13,7 +13,8 @@ fi
 export PATH="$HOME/.linuxbrew/bin:$PATH"
 
 ## Not WSL
-if [ "`uname -a | grep 'Microsoft'`" ]; then
+shopt -s nocasematch
+if [ ! "`uname -a | grep 'microsoft'`" ]; then
   :
 else
   brew install docker
