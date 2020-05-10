@@ -10,8 +10,8 @@ jobs:
       - name: Install dotfiles
         run: bin/install.sh
       - name: "Test for the 'dot' commands"
-        run: fish -c "dot update"
-        run: fish -c "dot install git-credential-helper"
+        run: fish -c "dot update" &&
+             fish -c "dot install git-credential-helper"
 
   centos:
     runs-on: ubuntu-latest
@@ -21,8 +21,8 @@ jobs:
       - name: Install dotfiles
         run: bin/install.sh
       - name: "Test for the 'dot' commands"
-        run: fish -c "dot update"
-        run: fish -c "dot install git-credential-helper"
+        run: fish -c "dot update" &&
+             fish -c "dot install git-credential-helper"
 
   archlinux:
     runs-on: ubuntu-latest
@@ -32,8 +32,8 @@ jobs:
       - name: Install dotfiles
         run: bin/install.sh
       - name: "Test for the 'dot' commands"
-        run: fish -c "dot update"
-        run: fish -c "dot install git-credential-helper"
+        run: fish -c "dot update" &&
+             fish -c "dot install git-credential-helper"
 
   macos:
     runs-on: macos-latest
@@ -42,5 +42,5 @@ jobs:
       - name: Install dotfiles
         run: bin/install.sh
       - name: "Test for the 'dot' commands"
-        run: fish -c "dot update"
-        run: fish -c "dot install git-credential-helper"
+        run: fish -c "dot update" &&
+             fish -c "dot install git-credential-helper"
