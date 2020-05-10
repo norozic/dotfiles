@@ -26,3 +26,4 @@ brew install gcc
 brew install curl
 brew install bat
 brew install exa
+brew install fd
