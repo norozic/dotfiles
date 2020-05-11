@@ -5,4 +5,6 @@ case 'git-credential-helper'
   $DOTPATH/git-credential-helper/install.fish
 case 'node'
   $DOTPATH/node/install.fish
+case 'rust'
+  $DOTPATH/rust/install.fish
 end
