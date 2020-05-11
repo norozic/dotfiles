@@ -32,6 +32,8 @@ brew install curl
 brew install bat
 brew install exa
 brew install fd
+brew tap cjbassi/ytop
+brew install ytop
 
 if [ ! "`sudo fd`" ]; then
   touch ~/sudoers.tmp ~/sudoers.bak
