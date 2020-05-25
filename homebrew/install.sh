@@ -46,3 +46,5 @@ if [ ! "`sudo fd`" ]; then
   sudo bash -c "cat $full_path > /etc/sudoers"
   rm ~/sudoers.tmp ~/sudoers.bak
 fi
+
+fish -c 'git config --global core.excludesfile $DOTPATH/configs/.gitignore_global'
