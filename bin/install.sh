@@ -9,7 +9,7 @@ if type "apt" > /dev/null 2>&1; then
   else
     apt install sudo -y
   fi
-  sudo apt install build-essential curl file git -y
+  sudo apt install build-essential curl file git python3-pip -y
 fi
 
 if type "yum" > /dev/null 2>&1; then
@@ -24,6 +24,7 @@ if type "yum" > /dev/null 2>&1; then
   sudo yum install libxcrypt-compat -y
   sudo yum install util-linux-user -y
   sudo yum install perl-ExtUtils-MakeMaker -y
+  sudo yum install python-pip -y
 fi
 
 if type "pacman" > /dev/null 2>&1; then
@@ -41,6 +42,7 @@ if type "pacman" > /dev/null 2>&1; then
   sudo pacman -S glibc --noconfirm
   sudo pacman -S make --noconfirm
   sudo pacman -S which --noconfirm
+  sudo pacman -S python-pip --noconfirm
 fi
 
 if type "git" > /dev/null 2>&1; then

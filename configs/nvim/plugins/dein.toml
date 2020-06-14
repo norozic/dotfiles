@@ -1,0 +1,55 @@
+[[plugins]]
+repo = "cocopon/iceberg.vim"
+
+[[plugins]]
+repo = "itchyny/lightline.vim"
+hook_add = """
+source ~/.config/nvim/plugins/lightline.rc.vim
+"""
+
+[[plugins]]
+repo = "sheerun/vim-polyglot"
+
+[[plugins]]
+repo = "tpope/vim-surround"
+
+[[plugins]]
+repo = "tpope/vim-fugitive"
+
+[[plugins]]
+repo = "airblade/vim-gitgutter"
+
+[[plugins]]
+repo = "autozimu/LanguageClient-neovim"
+build = "bash install.sh"
+
+[[plugins]]
+repo = "junegunn/fzf"
+
+[[plugins]]
+repo = "Shougo/deoplete.nvim"
+build=":UpdateRemotePlugins"
+hook_add = """
+source ~/.config/nvim/plugins/deoplete.rc.vim
+"""
+
+[[plugins]]
+repo = "dense-analysis/ale"
+hook_add = """
+source ~/.config/nvim/plugins/ale.rc.vim
+"""
+
+[[plugins]]
+repo = "cohama/lexima.vim"
+
+[[plugins]]
+repo = "ntpeters/vim-better-whitespace"
+
+[[plugins]]
+repo = "editorconfig/editorconfig-vim"
+
+[[plugins]]
+repo = "Yggdroot/indentLine"
+hook_add = """
+source ~/.config/nvim/plugins/indentLine.rc.vim
+"""
