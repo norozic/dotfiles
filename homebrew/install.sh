@@ -2,7 +2,7 @@
 
 sudo cat /dev/null
 
-if [ -d $HOME ]; then
+if [ -d $HOME/.linuxbrew ]; then
   :
 else
   echo 'Installing Homebrew...'
