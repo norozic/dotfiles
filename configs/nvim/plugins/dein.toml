@@ -17,18 +17,16 @@ repo = "tpope/vim-fugitive"
 repo = "airblade/vim-gitgutter"
 
 [[plugins]]
-repo = "autozimu/LanguageClient-neovim"
-build = "bash install.sh"
+repo = 'neoclide/coc.nvim'
+rev = 'release'
+on_i = 1
+merged = '0'
+hook_add = """
+source ~/.config/nvim/plugins/coc.rc.vim
+"""
 
 [[plugins]]
 repo = "junegunn/fzf"
-
-[[plugins]]
-repo = "Shougo/deoplete.nvim"
-build=":UpdateRemotePlugins"
-hook_add = """
-source ~/.config/nvim/plugins/deoplete.rc.vim
-"""
 
 [[plugins]]
 repo = "dense-analysis/ale"
