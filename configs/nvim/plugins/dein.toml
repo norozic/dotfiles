@@ -26,6 +26,12 @@ source ~/.config/nvim/plugins/coc.rc.vim
 """
 
 [[plugins]]
+repo = "elzr/vim-json"
+hook_add = """
+source ~/.config/nvim/plugins/vim-json.rc.vim
+"""
+
+[[plugins]]
 repo = "junegunn/fzf"
 
 [[plugins]]
