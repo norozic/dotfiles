@@ -3,7 +3,7 @@ colors:
     background: '#222222'
 
 window:
-  startup_mode: Fullscreen
+  startup_mode: Windowed
 
 font:
   normal:
