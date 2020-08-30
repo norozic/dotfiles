@@ -17,7 +17,11 @@ if [ -d ~/.config/zsh/ ]; then
   rm -rf ~/.config/zsh/
 fi
 
-$DOTPATH/bin/link.sh $DOTPATH/configs/zsh/ ~/.config/
+mkdir ~/.config/zsh/
+
+$DOTPATH/bin/link.sh $DOTPATH/configs/zsh/.zshrc ~/.config/zsh/.zshrc
+$DOTPATH/bin/link.sh $DOTPATH/configs/zsh/.zprofile ~/.config/zsh/.zprofile
+$DOTPATH/bin/link.sh $DOTPATH/configs/zsh/.zshenv ~/.config/zsh/.zshenv
 $DOTPATH/bin/link.sh $DOTPATH/configs/zsh/.zshenv ~/.zshenv
 
 zsh -c "zinit self-update"
