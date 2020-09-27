@@ -72,6 +72,12 @@ repo = 'Yggdroot/indentLine'
 hook_add = 'source ~/.config/nvim/plugins/indentLine.rc.vim'
 
 [[plugins]]
+repo = 'previm/previm'
+
+[[plugins]]
+repo = 'tyru/open-browser.vim'
+
+[[plugins]]
 repo = 'leafgarland/typescript-vim'
 
 [[plugins]]
