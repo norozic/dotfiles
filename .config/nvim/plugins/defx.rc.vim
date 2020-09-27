@@ -1,3 +1,25 @@
+call defx#custom#option('_', {
+  \ 'winwidth': 40,
+  \ 'split': 'vertical',
+  \ 'direction': 'topleft',
+  \ 'show_ignored_files': 1,
+  \ 'buffer_name': 'exproler',
+  \ 'toggle': 1,
+  \ 'resume': 1,
+  \ 'columns': 'indent:git:icons:filename:mark',
+  \ })
+
+call defx#custom#column('git', 'indicators', {
+  \ 'Modified'  : 'M',
+  \ 'Staged'    : 'S',
+  \ 'Untracked' : 'U',
+  \ 'Renamed'   : 'R',
+  \ 'Unmerged'  : 'UM',
+  \ 'Ignored'   : 'I',
+  \ 'Deleted'   : 'D',
+  \ 'Unknown'   : '?'
+  \ })
+
 autocmd FileType defx call s:defx_my_settings()
 
 function! s:defx_my_settings() abort
@@ -66,24 +88,3 @@ function! s:defx_my_settings() abort
   \ defx#do_action('change_vim_cwd')
 endfunction
 
-call defx#custom#option('_', {
-  \ 'winwidth': 40,
-  \ 'split': 'vertical',
-  \ 'direction': 'topleft',
-  \ 'show_ignored_files': 1,
-  \ 'buffer_name': 'exproler',
-  \ 'toggle': 1,
-  \ 'resume': 1,
-  \ 'columns': 'indent:git:icons:filename:mark',
-  \ })
-
-call defx#custom#column('git', 'indicators', {
-  \ 'Modified'  : 'M',
-  \ 'Staged'    : 'S',
-  \ 'Untracked' : 'U',
-  \ 'Renamed'   : 'R',
-  \ 'Unmerged'  : 'UM',
-  \ 'Ignored'   : 'I',
-  \ 'Deleted'   : 'D',
-  \ 'Unknown'   : '?'
-  \ })
