@@ -1,0 +1,48 @@
+[[plugins]]
+repo = 'prabirshrestha/vim-lsp'
+hook_add = 'source ~/.config/nvim/plugins/vim-lsp.rc.vim'
+
+[[plugins]]
+repo = 'mattn/vim-lsp-settings'
+hook_add = 'source ~/.config/nvim/plugins/vim-lsp-settings.rc.vim'
+
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+on_cmd = [
+    'Files',
+    'ProjectFiles',
+    'Buffers',
+    'BLines',
+    'History',
+    'Tags',
+    'BTags',
+    'GFiles',
+    'Ag',
+]
+hook_add = 'source ~/.config/nvim/plugins/fzf.rc.vim'
+
+[[plugins]]
+repo = 'lighttiger2505/deoplete-vim-lsp'
+
+[[plugins]]
+repo = 'elzr/vim-json'
+hook_add = 'source ~/.config/nvim/plugins/vim-json.rc.vim'
+
+[[plugins]]
+repo = 'previm/previm'
+
+[[plugins]]
+repo = 'tyru/open-browser.vim'
+
+[[plugins]]
+repo = 'leafgarland/typescript-vim'
+
+[[plugins]]
+repo = 'peitalin/vim-jsx-typescript'
+
+[[plugins]]
+repo = 'cespare/vim-toml'
+
+[[plugins]]
+repo = 'qnighy/satysfi.vim'
+

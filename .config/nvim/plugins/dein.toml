@@ -19,44 +19,9 @@ repo = 'tpope/vim-fugitive'
 repo = 'airblade/vim-gitgutter'
 
 [[plugins]]
-repo = 'Shougo/denite.nvim'
-build = ':UpdateRemotePlugins'
-hook_add = 'source ~/.config/nvim/plugins/denite.rc.vim'
-
-[[plugins]]
-repo = 'Shougo/defx.nvim'
-build = ':UpdateRemotePlugins'
-hook_add = 'source ~/.config/nvim/plugins/defx.rc.vim'
-
-[[plugins]]
-repo = 'kristijanhusak/defx-git'
-
-[[plugins]]
-repo = 'prabirshrestha/vim-lsp'
-hook_add = 'source ~/.config/nvim/plugins/vim-lsp.rc.vim'
-
-[[plugins]]
-repo = 'mattn/vim-lsp-settings'
-hook_add = 'source ~/.config/nvim/plugins/vim-lsp-settings.rc.vim'
-
-[[plugins]]
 repo = 'Shougo/deoplete.nvim'
 build = ':UpdateRemotePlugins'
 hook_add = 'source ~/.config/nvim/plugins/deoplete.rc.vim'
-
-[[plugins]]
-repo = 'lighttiger2505/deoplete-vim-lsp'
-
-[[plugins]]
-repo = 'elzr/vim-json'
-hook_add = 'source ~/.config/nvim/plugins/vim-json.rc.vim'
-
-[[plugins]]
-repo = 'junegunn/fzf'
-
-[[plugins]]
-repo = 'dense-analysis/ale'
-hook_add = 'source ~/.config/nvim/plugins/ale.rc.vim'
 
 [[plugins]]
 repo = 'cohama/lexima.vim'
@@ -68,26 +33,12 @@ repo = 'ntpeters/vim-better-whitespace'
 repo = 'editorconfig/editorconfig-vim'
 
 [[plugins]]
+repo = 'dense-analysis/ale'
+hook_add = 'source ~/.config/nvim/plugins/ale.rc.vim'
+
+[[plugins]]
 repo = 'Yggdroot/indentLine'
 hook_add = 'source ~/.config/nvim/plugins/indentLine.rc.vim'
-
-[[plugins]]
-repo = 'previm/previm'
-
-[[plugins]]
-repo = 'tyru/open-browser.vim'
-
-[[plugins]]
-repo = 'leafgarland/typescript-vim'
-
-[[plugins]]
-repo = 'peitalin/vim-jsx-typescript'
-
-[[plugins]]
-repo = 'cespare/vim-toml'
-
-[[plugins]]
-repo = 'qnighy/satysfi.vim'
 
 [[plugins]]
 repo = 'JuliaEditorSupport/julia-vim'

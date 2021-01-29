@@ -15,9 +15,7 @@ if dein#load_state('~/.cache/dein/')
   call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
 
   call dein#load_toml('~/.config/nvim/plugins/dein.toml', {'lazy': 0})
-  " Add or remove your plugins here like this:
-  "call dein#add('Shougo/neosnippet.vim')
-  "call dein#add('Shougo/neosnippet-snippets')
+  call dein#load_toml('~/.config/nvim/plugins/dein-lazy.toml', {'lazy': 1})
 
   " Required:
   call dein#end()
@@ -56,7 +54,7 @@ nnoremap <silent> O :<C-u>call append(expand('.'), '')<Cr>j
 nnoremap <silent> st :tabnew<Cr>:Defx<Cr>
 inoremap <silent> jj <ESC>
 
-let mapleader = ","
+map <Space> <Leader>
 
 set number
 
