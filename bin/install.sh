@@ -45,6 +45,8 @@ if [ ! -d $HOME/.config/ ]; then
   mkdir $HOME/.config
 fi
 
+/bin/bash $DOTPATH/bin/link.sh $DOTPATH/.config/* ~/.config/
+
 /bin/bash ./bin/zsh.sh
 /bin/bash ./bin/nvim.sh
 /bin/bash ./bin/deno.sh

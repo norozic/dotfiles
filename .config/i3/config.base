@@ -152,4 +152,3 @@ bar {
 
 bindsym $mod+Left workspace prev
 bindsym $mod+Right workspace next
-bindsym $mod+Shift+r exec "$HOME/.config/mkconfig.sh && i3-msg restart"
