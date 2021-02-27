@@ -1,11 +1,12 @@
 [core]
 	excludesfile = ~/.gitignore_global
-[user]
-	email = 54768914+norozic@users.noreply.github.com
-	name = noroz
-[credential]
-	helper = /usr/lib/git-core/git-credential-libsecret
 [ghq]
-  root = ~/repos
+	root = ~/repos
 [init]
 	defaultBranch = main
+[credential]
+	helper = /usr/share/git/credential/netrc/git-credential-netrc.perl
+[user]
+	signingkey = A62CC42736387011C65138B840A7518878FDA639
+[commit]
+	gpgsign = true
