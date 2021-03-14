@@ -1,5 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =9
+let g:netrw_dirhistcnt =2
+let g:netrw_dirhist_2='/home/monya/tmp/servo_test_app/target/debug/build/servo-c00cf9fe38837a6c/out'
+let g:netrw_dirhist_1='/home/monya/repos/github.com/shiychi/riscv-emu/src'
+let g:netrw_dirhist_0='/home/monya/repos/github.com/shiychi/riscv-emu/src/cpu'
 let g:netrw_dirhist_9='/home/gono/mqtt-server/.mosquitto/config/mosquitto.conf'
 let g:netrw_dirhist_8='/home/monya/repos/github.com/41b1r30/infra/influxdb/docker-entrypoint-initdb.d'
 let g:netrw_dirhist_7='/home/monya/repos/github.com/41b1r30/infra/mongodb/docker-entrypoint-initdb.d'
@@ -7,6 +10,3 @@ let g:netrw_dirhist_6='/home/monya/repos/github.com/41b1r30/infra/mongodb'
 let g:netrw_dirhist_5='/home/monya/.config/gtk-3.0'
 let g:netrw_dirhist_4='/home/monya/dotfiles'
 let g:netrw_dirhist_3='/home/monya/dotfiles/.config/vscode'
-let g:netrw_dirhist_2='/home/nyonyo/.config/alacritty'
-let g:netrw_dirhist_1='/home/hezrq/repos/github.com/41b1r30/webapp/src/components/molecules'
-let g:netrw_dirhist_0='/home/hezrq/repos/github.com/41b1r30/webapp/src/components'

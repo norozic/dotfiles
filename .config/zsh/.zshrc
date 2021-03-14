@@ -8,6 +8,9 @@ if [ -f $HOME/.cargo/env ]; then
   source $HOME/.cargo/env
 fi
 
+# asdf
+source /opt/asdf-vm/asdf.sh
+
 mkdir -p /tmp/$USER-zsh-completions/
 if hash rustup 2>/dev/null; then
     rustup completions zsh > /tmp/$USER-zsh-completions/_rustup
@@ -26,14 +29,16 @@ alias ls="exa"
 alias vi="nvim"
 alias g="git"
 alias t="tmuximum"
-alias rustcheck="cargo clippy -- -W clippy::all && cargo fmt --all -- --check"
-alias keylightoff="echo 0 | doas tee /sys/class/leds/dell::kbd_backlight/brightness"
+alias rustcheck="RUSTFLAGS='-D warnings' cargo clippy && cargo fmt --all -- --check && cargo test"
 
 # Use vim keybind
 bindkey -v
 
 # Change default editor to Neovim
 export EDITOR=nvim
+
+# prompt
+export PURE_PROMPT_SYMBOL='%%'
 
 is_i3=$(uname -a | grep arch)
 
@@ -87,6 +92,7 @@ zinit light-mode for \
 # plugins
 zinit ice as"program" pick"tmuximum"
 zinit load arks22/tmuximum
+zinit ice wait'!0'; zinit light sindresorhus/pure
 zinit ice wait'!0'; zinit light zsh-users/zsh-autosuggestions
 zinit ice wait'!0'; zinit light zsh-users/zsh-completions
 zinit ice wait'!0'; zinit light zdharma/fast-syntax-highlighting
@@ -98,30 +104,3 @@ if [ ! $is_i3 ]; then
     tmuximum
   fi
 fi
-
-function precmd() {
-  default_prompt="%(?.%{${fg[white]}%}.%{${fg[red]}%})%#%{${reset_color}%} "
-  dir="%F{magenta}$(print %~)%f"
-  if [ -n "$TMUX" ]; then
-    PROMPT=$default_prompt
-    tmux refresh-client -S
-  else
-    if ls .git/ > /dev/null 2>&1; then
-      declare -a git_status_raw=($(git-status-conv "$(git status)"))
-      git_branch=${git_status_raw[1]}
-      git_state=${git_status_raw[2]}
-      if [ -n "$git_branch" ]; then
-        git_info="%F{blue} ${git_branch}%f %F{red}${git_state}%f"
-      else
-        git_info=""
-      fi
-      PROMPT="""
-$dir $git_info
-$default_prompt"""
-    else
-      PROMPT="""
-$dir
-$default_prompt"""
-    fi
-  fi
-}

@@ -1,19 +1,15 @@
 " vim-plug
 call plug#begin('~/.cache/nvim/plugged')
 
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'Yggdroot/indentLine'
-Plug 'airblade/vim-gitgutter'
 Plug 'cocopon/iceberg.vim'
 Plug 'cohama/lexima.vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf.vim'
-Plug 'lighttiger2505/deoplete-vim-lsp'
-Plug 'mattn/vim-lsp-settings'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ntpeters/vim-better-whitespace'
-Plug 'prabirshrestha/vim-lsp'
-Plug 'tpope/vim-fugitive'
+Plug 'phaazon/hop.nvim', { 'branch': 'pre-extmarks' }
 Plug 'tpope/vim-surround'
 
 " on-demand loading
@@ -30,67 +26,49 @@ Plug 'tyru/open-browser.vim', { 'for': 'markdown' }
 call plug#end()
 
 " load plugin settings
-source ~/.config/nvim/plugins/deoplete.rc.vim
+source ~/.config/nvim/plugins/coc.rc.vim
 source ~/.config/nvim/plugins/indentLine.rc.vim
 source ~/.config/nvim/plugins/lightline.rc.vim
 source ~/.config/nvim/plugins/fzf.rc.vim
-source ~/.config/nvim/plugins/vim-lsp-settings.rc.vim
-source ~/.config/nvim/plugins/vim-lsp.rc.vim
 source ~/.config/nvim/plugins/csv.rc.vim
 source ~/.config/nvim/plugins/vim-json.rc.vim
+
+" fzf.vim
+command! -bang -nargs=? -complete=dir GFiles call fzf#vim#gitfiles('--exclude-standard --cached --others')
+nnoremap <silent> <leader>f :<C-u>GFiles<Cr>
 
 " load theme
 colorscheme iceberg
 syntax on
 
-highlight Normal ctermbg=NONE guibg=NONE
-highlight NonText ctermbg=NONE guibg=NONE
-highlight SpecialKey ctermbg=NONE guibg=NONE
-highlight EndOfBuffer ctermbg=NONE guibg=NONE
+highlight CursorLineNr ctermbg=NONE
+highlight EndOfBuffer ctermbg=NONE
 highlight LineNr ctermbg=NONE
+highlight NonText ctermbg=NONE
+highlight Normal ctermbg=NONE
+highlight SpecialKey ctermbg=NONE
 highlight clear SignColumn
-highlight GitGutterAdd ctermbg=NONE
-highlight GitGutterChange ctermbg=NONE
-highlight GitGutterDelete ctermbg=NONE
-highlight GitGutterChangeDelete ctermbg=NONE
 
 let g:python3_host_prog = '/usr/bin/python'
 
 nnoremap <silent> O :<C-u>call append(expand('.'), '')<Cr>j
-nnoremap <silent> st :tabnew<Cr>:Defx<Cr>
 inoremap <silent> jj <ESC>
+nnoremap <silent> s :<C-u>HopChar2<Cr>
+nnoremap <silent> gf :<C-u>Format<Cr>
 
 map <Space> <Leader>
 
+set autoindent
+set clipboard=unnamed
+set expandtab
 set number
-
+set relativenumber
+set scrolloff=10
+set shiftwidth=2
+set splitright
+set tabstop=2
 set updatetime=100
 
-set scrolloff=10
-
-set autoindent
-set tabstop=2
-set shiftwidth=2
-set expandtab
-set splitright
-set clipboard=unnamed
-
-set guifont=JetBrains\ Mono:h8
-if executable('rust-analyzer')
-  au User lsp_setup call lsp#register_server({
-        \   'name': 'Rust Language Server',
-        \   'cmd': {server_info->['rust-analyzer']},
-        \   'whitelist': ['rust'],
-        \   'initialization_options': {
-        \     'cargo': {
-        \       'loadOutDirsFromCheck': v:true,
-        \     },
-        \     'procMacro': {
-        \       'enable': v:true,
-        \     },
-        \   },
-        \ })
-endif
 autocmd BufNewFile,BufRead *.jl set filetype=julia
 autocmd BufNewFile,BufRead *.sh set filetype=bash
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx

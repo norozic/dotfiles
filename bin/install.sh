@@ -2,12 +2,13 @@
 DOTPATH=~/dotfiles
 DOTURL=https://github.com/hezrq/dotfiles
 
-yay -Syyu --noconfirm
+yay -S alsa-utils --noconfirm
 yay -S asdf --noconfirm
 yay -S clang --noconfirm
 yay -S curl --noconfirm
 yay -S direnv --noconfirm
 yay -S doas --noconfirm
+yay -S dunst --noconfirm
 yay -S exa --noconfirm
 yay -S file --noconfirm
 yay -S fzf --noconfirm
@@ -25,6 +26,7 @@ yay -S tig --noconfirm
 yay -S unzip --noconfirm
 yay -S which --noconfirm
 yay -S zsh --noconfirm
+yay -Syyu --noconfirm
 
 if type "git" > /dev/null 2>&1; then
   if [ -d $DOTPATH ]; then
