@@ -4,8 +4,12 @@ icons = "awesome"
 [[block]]
 block = "disk_space"
 path = "/"
-info_type = "used"
-format = "{icon} {used}/{total}"
+alias = "/"
+info_type = "available"
+unit = "GB"
+interval = 20
+warning = 20.0
+alert = 10.0
 
 [[block]]
 block = "memory"
@@ -20,17 +24,6 @@ interval = 1
 block = "load"
 interval = 1
 format = "{1m}"
-
-[[block]]
-block = "battery"
-interval = 10
-format = "{percentage} {time}"
-
-[[block]]
-block = "backlight"
-
-[[block]]
-block = "sound"
 
 [[block]]
 block = "time"

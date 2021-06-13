@@ -1,10 +1,5 @@
 require 'plugins'
--- require 'completion'
--- require 'lsp'
-require 'coc'
-require 'fzf'
-require 'indentLine'
-require 'vim-json'
+require 'statusline'
 
 vim.cmd([[
 colorscheme tokyonight

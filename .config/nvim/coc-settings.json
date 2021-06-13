@@ -1,4 +1,5 @@
 {
   "html.autoClosingTags": true,
-  "typescript.showUnused": false
+  "typescript.showUnused": false,
+  "Lua.diagnostics.globals": ["vim"]
 }

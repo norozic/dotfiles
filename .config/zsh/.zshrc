@@ -28,6 +28,7 @@ fi
 alias ls="exa"
 alias cat="bat"
 alias vi="nvim"
+alias lg="lazygit"
 alias g="git"
 alias rustcheck="RUSTFLAGS='-D warnings' cargo clippy && cargo fmt --all -- --check && cargo test"
 
