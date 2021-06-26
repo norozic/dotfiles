@@ -1,5 +1,10 @@
 require 'plugins'
+require 'coc'
+require 'fzf'
+require 'indentLine'
 require 'statusline'
+require 'vim-json'
+require 'treesitter'
 
 vim.cmd([[
 colorscheme tokyonight
