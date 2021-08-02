@@ -25,6 +25,7 @@ autocmd BufNewFile,BufRead *.go setlocal noet ts=8 sw=8 sts=8
 ]])
 
 vim.g.python3_host_prog = '/usr/bin/python'
+vim.g.auto_save = 1
 vim.o.completeopt = 'menuone,noselect'
 
 vim.api.nvim_set_option('autoindent', true)
@@ -48,9 +49,14 @@ vim.api.nvim_set_keymap('i', 'jj', '<Esc>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', 'O', [[:<C-u>call append(expand("."), '')<Cr>j]], { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', 'gf', ':<C-u>Format<Cr>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', 'gq', ':<C-u>CocFix<Cr>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', 'a', ':<C-u>HopChar1<Cr>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', 's', ':<C-u>HopChar2<Cr>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>hr', ':%!xxd<Cr> :set filetype=xxd<Cr>', { noremap = true, silent = true }) -- Hex read
 vim.api.nvim_set_keymap('n', '<Leader>hw', ':%!xxd -r<Cr> :set binary<Cr> :set filetype=<Cr>', { noremap = true, silent = true }) -- Hex write
+vim.api.nvim_set_keymap('n', '<Leader>w', 'zf', { noremap = true, silent = true }) -- Hex write
+vim.api.nvim_set_keymap('n', '<Leader>q', 'zd', { noremap = true, silent = true }) -- Hex write
+vim.api.nvim_set_keymap('n', '<Leader>s', ':<C-u>HopLineVisual<Cr>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>a', ':<C-u>HopChar2<Cr>', { noremap = true, silent = true })
 
 -- fzf.vim
 vim.api.nvim_set_keymap('n', '<Leader>f', ':<C-u>GFiles<Cr>', { noremap = true, silent = true })
