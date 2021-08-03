@@ -148,8 +148,8 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Mappings for CoCList
 " Show all diagnostics.
-nnoremap <silent><nowait> <Leader>e  :<C-u>CocFzfList diagnostics<cr>
+" nnoremap <silent><nowait> <Leader>e  :<C-u>CocFzfList diagnostics<cr>
 " Find symbol of current document.
-nnoremap <silent><nowait> <space>o  :<C-u>CocFzfList outline<cr>
+" nnoremap <silent><nowait> <space>o  :<C-u>CocFzfList outline<cr>
 " Search workspace symbols.
 " nnoremap <silent><nowait> <Leader>o  :<C-u>CocFzfList -I symbols<cr>

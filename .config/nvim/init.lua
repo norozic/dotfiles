@@ -1,10 +1,8 @@
 require 'plugins'
-require 'coc'
-require 'fzf'
-require 'indentLine'
-require 'statusline'
-require 'vim-json'
-require 'treesitter'
+require 'rc/coc'
+require 'rc/statusline'
+require 'rc/telescope'
+require 'rc/treesitter'
 
 vim.cmd([[
 colorscheme tokyonight
@@ -47,19 +45,36 @@ vim.api.nvim_win_set_option(0, 'relativenumber', true)
 vim.api.nvim_set_keymap('', '<Space>', '<Leader>', {})
 vim.api.nvim_set_keymap('i', 'jj', '<Esc>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', 'O', [[:<C-u>call append(expand("."), '')<Cr>j]], { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', 'gf', ':<C-u>Format<Cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', 'gq', ':<C-u>CocFix<Cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', 'a', ':<C-u>HopChar1<Cr>', { noremap = true, silent = true })
-vim.api.nvim_set_keymap('n', 's', ':<C-u>HopChar2<Cr>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>hr', ':%!xxd<Cr> :set filetype=xxd<Cr>', { noremap = true, silent = true }) -- Hex read
 vim.api.nvim_set_keymap('n', '<Leader>hw', ':%!xxd -r<Cr> :set binary<Cr> :set filetype=<Cr>', { noremap = true, silent = true }) -- Hex write
 vim.api.nvim_set_keymap('n', '<Leader>w', 'zf', { noremap = true, silent = true }) -- Hex write
 vim.api.nvim_set_keymap('n', '<Leader>q', 'zd', { noremap = true, silent = true }) -- Hex write
+vim.api.nvim_set_keymap('n', '<Leader>h', ':<C-u>noh<Cr>', { noremap = true, silent = true })
+
+-- coc.nvim
+vim.api.nvim_set_keymap('n', 'gf', ':<C-u>Format<Cr>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', 'gq', ':<C-u>CocFix<Cr>', { noremap = true, silent = true })
+
+-- telescope.nvim
+vim.api.nvim_set_keymap('n', '<Leader>g', '<Cmd>Telescope find_files<Cr>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>f', '<Cmd>Telescope git_files<Cr>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>r', '<Cmd>Telescope current_buffer_fuzzy_find<Cr>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>o', '<Cmd>Telescope coc diagnostics<Cr>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>e', '<Cmd>Telescope treesitter<Cr>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>l', '<Cmd>Telescope buffers<Cr>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>s', '<Cmd>Telescope spell_suggest<Cr>', { noremap = true, silent = true })
+
+-- hop.nvim
+vim.api.nvim_set_keymap('n', 'a', ':<C-u>HopChar1<Cr>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', 's', ':<C-u>HopChar2<Cr>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>s', ':<C-u>HopLineVisual<Cr>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>a', ':<C-u>HopChar2<Cr>', { noremap = true, silent = true })
 
--- fzf.vim
-vim.api.nvim_set_keymap('n', '<Leader>f', ':<C-u>GFiles<Cr>', { noremap = true, silent = true })
+-- hop.nvim
+vim.api.nvim_set_keymap('n', 'a', ':<C-u>HopChar1<Cr>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', 's', ':<C-u>HopChar2<Cr>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>s', ':<C-u>HopLineVisual<Cr>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>a', ':<C-u>HopChar2<Cr>', { noremap = true, silent = true })
 
 vim.cmd[[set shiftwidth=2
 set expandtab]]

@@ -42,15 +42,6 @@ export EDITOR=nvim
 # prompt
 export PURE_PROMPT_SYMBOL='%%'
 
-function nvim-fzf() {
-  local src=$(fd --type f | fzf)
-  if [ -n "$src" ]; then
-    BUFFER="nvim '$src'"
-    zle accept-line
-  fi
-  zle -R -c
-}
-
 function ghq-fzf() {
   local src=$(ghq list | fzf)
   if [ -n "$src" ]; then
@@ -64,7 +55,6 @@ zle -N nvim-fzf
 zle -N ghq-fzf
 
 bindkey '^g' ghq-fzf
-bindkey 'nf' nvim-fzf
 
 # direnv
 eval "$(direnv hook zsh)"
